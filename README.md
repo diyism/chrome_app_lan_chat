@@ -4,7 +4,7 @@
 
 然后Load unpacked extension 按钮选上前面解压的文件夹安装,
 
-最后点击 Launch按钮就启动了一个 http/websocket聊天服务器,
+最后点击 Launch按钮(或从 chrome://apps/ )就启动了一个 http/websocket聊天服务器,
 
 然后同事们都可以 访问 http://<我的内网ip>:9999 一起聊天了
 
