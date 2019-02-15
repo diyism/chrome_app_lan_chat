@@ -1,3 +1,5 @@
+chrome app lan chat  基于浏览器插件的http服务器, 内网聊天工具, 同事间临时聊天
+
 把我改写的websocket_server_test.diyism.zip文件解压到一个文件夹,
 
 并在chrome浏览器的 chrome://extensions/ 页面 勾上 Developer mode,
