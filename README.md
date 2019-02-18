@@ -1,4 +1,4 @@
-chrome app lan chat  基于浏览器插件的http服务器, 内网聊天工具, 同事间临时聊天
+chrome app lan chat  基于浏览器插件的http服务器, 内网聊天工具, 同事间临时聊天, http server on chrome
 
 把我改写的websocket_server_test.diyism.zip文件解压到一个文件夹,
 
