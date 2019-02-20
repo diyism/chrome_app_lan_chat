@@ -8,6 +8,6 @@ chrome app lan chat  基于浏览器插件的http服务器, 内网聊天工具, 
 
 最后点击 Launch按钮(或从 chrome://apps/ )就启动了一个 http/websocket聊天服务器,
 
-然后同事们都可以 访问 http://<我的内网ip>:9999 一起聊天了
+然后同事们都可以 访问 http://<我的内网ip>:21404 一起聊天了
 
 如果运维有内网所有人名字 和 ip的对应关系 也可以很容易打包到 chrome http server里
