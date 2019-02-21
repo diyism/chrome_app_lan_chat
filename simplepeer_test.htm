@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+  <body>
+    <form>
+      <textarea id="incoming"></textarea>
+      <button type="submit">fill offer/answer</button>
+    </form>
+    <pre id="outgoing" style="width: 600px;word-wrap: break-word;"></pre>
+    <input id="input"/>
+    <button id="send">send</button><br><br>
+    Received:<br>
+    <textarea readonly id="log" style="width:200px;height:200px;"></textarea>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-peer/9.2.1/simplepeer.min.js"></script>
+<script>
+var Peer = SimplePeer;
+var p = new Peer({ initiator: location.hash === '#1', trickle: false })
+
+p.on('error', function (err) { console.log('error', err) })
+
+p.on('signal', function (data) {
+  console.log('SIGNAL', JSON.stringify(data))
+  document.querySelector('#outgoing').textContent = JSON.stringify(data)
+})
+
+document.querySelector('form').addEventListener('submit', function (ev) {
+  ev.preventDefault()
+  p.signal(JSON.parse(document.querySelector('#incoming').value))
+})
+
+document.querySelector('#send').addEventListener('click', function (ev) {
+    p.send(document.querySelector('#input').value);
+})
+
+p.on('connect', function () {
+  console.log('CONNECT')
+  p.send('connected' + Math.random())
+})
+
+p.on('data', function (data) {
+  console.log('data: ' + data)
+  document.querySelector('#log').value+=(data+"\n");
+})
+</script>
