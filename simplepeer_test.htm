@@ -16,8 +16,8 @@ Open two tab pages on browser: one with url "file:///.../simplepeer_test.htm#1",
     <textarea readonly id="log" style="width:200px;height:200px;"></textarea>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-peer/9.2.1/simplepeer.min.js"></script>
 <script>
-var Peer = SimplePeer;
-var p = new Peer({ initiator: location.hash === '#1', trickle: false })
+navigator.mediaDevices.getUserMedia({audio: true}).then(()=>{     //must use getUserMedia to candidate at VPN interfaces. ref: https://tools.ietf.org/html/draft-ietf-rtcweb-ip-handling-02
+var p = new SimplePeer({ initiator: location.hash === '#1', trickle: false, config: {iceServers:[]}})     //use empty iceServers to force fast searching local interfaces
 
 p.on('error', function (err) { console.log('error', err) })
 
@@ -43,5 +43,6 @@ p.on('connect', function () {
 p.on('data', function (data) {
   console.log('data: ' + data)
   document.querySelector('#log').value+=(data+"\n");
+})
 })
 </script>
