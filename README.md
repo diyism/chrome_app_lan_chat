@@ -1,4 +1,4 @@
------------old versions of Chrome apps won't open on Linux devices after December 2022---------
+-----------old versions of Chrome apps won't open on Windows/Linux devices after December 2022---------
 
 chrome app lan chat  基于浏览器插件的http服务器, 内网聊天工具, 同事间临时聊天, http server on chrome
 
