@@ -1,3 +1,5 @@
+-----------old versions of Chrome apps won't open on Linux devices after December 2022---------
+
 chrome app lan chat  基于浏览器插件的http服务器, 内网聊天工具, 同事间临时聊天, http server on chrome
 
 把我改写的chrome_http_server.zip文件解压到一个文件夹(unzip chrome_http_server.zip -d chrome_http_server),
